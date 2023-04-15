@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .bg-dark {
+        background-color: rgb(15 23 42);
+    }
+    .bg-img {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/programming.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+}
