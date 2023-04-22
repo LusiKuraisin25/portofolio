@@ -4,8 +4,6 @@ import { Head, Link } from '@inertiajs/react'
 import { Button } from '@material-tailwind/react';
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import Deletepost from './DeletePost';
-import Edit from './Edit';
 
 export default function Post({ auth, title, message }) {
     const [data, setData] = useState([])
@@ -16,10 +14,10 @@ export default function Post({ auth, title, message }) {
     }, [])
 
     const fetchData = async () => {
-        const response = await axios.get('/api/posts')
-        setData(response.data.data)
+        const response = await axios.get('http://localhost:4000/karyawan')
+        setData(response.data)
         setLoading(false)
-    };
+    }
 
     let i = 1
 
@@ -60,13 +58,13 @@ export default function Post({ auth, title, message }) {
                                         {data.map(d => (
                                             <tr className='border-b border-gray-500/50' key={i}>
                                                 <td className='p-2'>{i++}.</td>
-                                                <td className='p-2'>{d.id_user}</td>
-                                                <td className='p-2'>{d.title}</td>
+                                                <td className='p-2'>{d.nama}</td>
+                                                {/* <td className='p-2'>{d.title}</td>
                                                 <td className='p-2'>{d.content}</td>
                                                 <td className='p-2'>
                                                     <Deletepost idpost={d.id} label='Delete' />
                                                     <Edit auth={auth} post={d} />
-                                                </td>
+                                                </td> */}
                                             </tr>
                                         ))}
                                     </tbody>

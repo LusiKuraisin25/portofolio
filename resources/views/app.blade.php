@@ -14,14 +14,14 @@
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
+    {{-- Tailwindcss --}}
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Scripts -->
     @routes
     @viteReactRefresh
     @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
     @inertiaHead
-    <style>
-        bg {}
-    </style>
 </head>
 
 <body class="font-sans antialiased overflow-x-hidden bg-black">
