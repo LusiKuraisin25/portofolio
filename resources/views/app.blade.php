@@ -16,6 +16,11 @@
 
     {{-- Tailwindcss --}}
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        bg {
+            background: #0f172a;
+        }
+    </style>
 
     <!-- Scripts -->
     @routes
@@ -24,7 +29,7 @@
     @inertiaHead
 </head>
 
-<body class="font-sans antialiased overflow-x-hidden bg-black">
+<body class="font-sans antialiased overflow-x-hidden bg-black selection:bg-slate-300/50">
     @inertia
 </body>
 

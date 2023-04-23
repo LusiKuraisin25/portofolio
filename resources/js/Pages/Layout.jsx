@@ -1,5 +1,5 @@
 import Navbar from "@/Components/Navbar";
-import Footer from "@/Components/footer";
+import Footer from "@/Components/Footer";
 import { Head } from "@inertiajs/react";
 
 export default function Layout({title, children, className = ''}) {
