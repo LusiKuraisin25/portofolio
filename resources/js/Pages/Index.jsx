@@ -1,9 +1,6 @@
 import Layout from "./Layout";
 
 export default function Index({title}) {
-
-
-
     return (
         <Layout title={title}>
             <div className="w-screen text-white h-screen bg-img">
