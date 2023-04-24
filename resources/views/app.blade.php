@@ -17,8 +17,19 @@
     {{-- Tailwindcss --}}
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        bg {
-            background: #0f172a;
+        ::-webkit-scrollbar {
+            width: 20px;
+            background: gray;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgb(100, 100, 100);
+            border-radius: 10px;
+            box-shadow: inset -3px 0 8px black, inset 1px 0 0px gray;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(70, 70, 70);
         }
     </style>
 
@@ -29,7 +40,7 @@
     @inertiaHead
 </head>
 
-<body class="font-sans antialiased overflow-x-hidden bg-black selection:bg-slate-300/50">
+<body class="scroll-smooth font-sans antialiased overflow-x-hidden bg-black selection:bg-slate-300/50">
     @inertia
 </body>
 
