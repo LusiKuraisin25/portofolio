@@ -18,8 +18,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         ::-webkit-scrollbar {
-            width: 20px;
-            background: gray;
+            width: 17px;
+            background: rgb(150, 150, 150);
+            box-shadow: inset 0 5px 5px black, inset 0 -5px 5px black;
         }
 
         ::-webkit-scrollbar-thumb {

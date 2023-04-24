@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ApiController;
+use App\Http\Controllers\MessageController;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,10 +20,10 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('/posts', [ApiController::class, 'index'])->name('api.view');
+Route::get('/messages', [MessageController::class, 'index'])->name('messages.view');
 
-Route::post('/posts', [ApiController::class, 'store'])->name('api.create');
+Route::post('/messages', [MessageController::class, 'store'])->name('messages.create');
 
-Route::patch('/posts/{id}', [ApiController::class, 'update'])->name('api.update');
+Route::patch('/messages/{id}', [MessageController::class, 'update'])->name('messages.update');
 
-Route::delete('/posts/{id}', [ApiController::class, 'destroy'])->name('api.destroy');
+Route::delete('/messages/{id}', [MessageController::class, 'destroy'])->name('messages.destroy');
